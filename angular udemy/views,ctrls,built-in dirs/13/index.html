@@ -1,0 +1,15 @@
+<html ng-app="app">
+  <body>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+    </head>
+    <div ng-controller="MainController">
+      <div>Num: {{num}}</div>
+      <div>Nums: {{nums}}</div>
+
+      <button ng-click="increment()">Increment</button>
+      <button ng-click="breakit()">Break it!</button>
+    </div>
+  </body>
+</html>

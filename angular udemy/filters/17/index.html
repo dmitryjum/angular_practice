@@ -1,0 +1,17 @@
+<html ng-app="app">
+  <body>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+    </head>
+    <div ng-controller="MainController">
+      <input ng-model="mydata.str">
+      <!-- {{ mydata.str | charlimit }} -->
+
+      <!-- we can set the parameter for minage argument in our custom filter function -->
+      <div ng-repeat="user in mydata.arr | candrink:mydata.str">
+        {{ user }}
+      </div>
+    </div>
+  </body>
+</html>

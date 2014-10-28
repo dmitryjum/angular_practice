@@ -1,0 +1,26 @@
+<html ng-app="app">
+  <body>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+      <script type="text/javascript" src="app.js"></script>
+      <style type="text/css">
+        .orange {
+          color: orange;
+        }
+
+        .italic {
+          font-style: italic;
+        }
+      </style>
+    </head>
+    <div ng-controller="MainController">
+<!--       <h1 ng-class="{orange: classVar, italic: classVar}">Hello there!</h1>
+ --> 
+<!-- simplest template -->
+      <div ng-include="'test.html'"></div>
+    </div>
+   <script type="text/ng-template" id="test.html">
+    <h1>My template</h1>
+   </script>
+  </body>
+</html>
