@@ -1,0 +1,19 @@
+<html ng-app="app">
+  <body>
+    <div ng-controller="MainController">
+      <button ng-click="callme('str')">Click me!</button>
+      <input ng-model="photo.date" />
+      <photo photo-src="photo.url" caption="Taken on: {{photo.date}}" local-func="callme(msg)" />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/ng-template" id="photo.html">
+      <figure>
+        <img width="500px" ng-src="{{photoSrc}}"/>
+        <figcaption>{{caption}}</figcaption>
+        <button ng-click="localFunc({msg:mydata})">
+          Click me!</button>
+      </figure>
+    </script>
+  </body>
+</html>
